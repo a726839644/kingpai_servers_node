@@ -13,7 +13,7 @@ app.listen(80);
 parseFS(app);
 
 app.get('*', function(req, res){
-    res.send(404);
+    res.sendStatus(404);
 });
 
 console.log("start wwwnode");
