@@ -6,7 +6,7 @@ var parseFS = require('./modules/parseFS');
 
 var app = express();
 
-app.use(express.static("../kingpai_servers_node_public"));
+app.use(express.static("../kingpai_servers_node_public/public"));
 
 app.listen(80);
 
