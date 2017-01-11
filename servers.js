@@ -3,16 +3,20 @@
  */
 var express = require("express");
 var parseFS = require('./modules/parseFS');
+var parseXlsx = require('./modules/parse_xlsx');
+var multer = require("multer");
 
 var app = express();
+
 
 app.use(express.static("../kingpai_servers_node_public/public"));
 
 app.listen(80);
 
 parseFS(app);
+parseXlsx(app);
 
-app.get('*', function(req, res){
+app.get('*', function (req, res) {
     res.sendStatus(404);
 });
 
